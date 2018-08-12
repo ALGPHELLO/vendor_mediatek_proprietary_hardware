@@ -1,0 +1,28 @@
+
+cc_binary {
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    name: "power_native_test",
+    srcs: [
+        "power_native_test.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libutils",
+        "libhardware",
+        "libhidlbase",
+        "libhidltransport",
+        "libhwbinder",
+        "android.hardware.power@1.0",
+        "vendor.mediatek.hardware.power@1.1_vendor",
+    ],
+
+}
+

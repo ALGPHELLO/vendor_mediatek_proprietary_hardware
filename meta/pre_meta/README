@@ -1,0 +1,24 @@
+This directory contains the pre-meta binary, the daemon will run in normal
+mode. It will write the meta boot flag in misc partition.
+
+WHAT IT DOES?
+=============
+This runs in the user-space and is used to write the meta boot flag in misc
+partition. And lk will read the boot flag to check whether need to boot up
+in meta mode.
+
+HOW IT WAS BUILT?
+==================
+It needs the following libs from AOSP:
+1. libc.so
+2. libcutils.so
+
+
+
+This module is released in source code format in 'vendor/mediatek/proprietary/external/meta'folder.
+
+
+HOW TO USE IT?
+==============
+pre-meta is used to write the meta boot flag in misc partition.
+This service is run in normal mode. It is triggered by Power Manager service. 

@@ -1,0 +1,5 @@
+MTK Vendor 
+
+Oreo 8.1 
+
+TODO by yourself : Modify if to suite using in Custom Roms

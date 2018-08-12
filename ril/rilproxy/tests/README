@@ -1,0 +1,18 @@
+WHAT IT DOES?
+=============
+RILD unit test code.
+
+HOW IT WAS BUILT?
+==================
+You can build it by android build command.
+
+HOW TO USE IT?
+==============
+Change the LOCAL_MODULE from mtk-rilproxy to libmtk-rilproxy
+comment the grabPartialWakeLock() and shouldScheduleTimeout = true in RIL_onUnsolicitedResponse
+May need to comment RpFeatureOptionUtils::isC2kSupport() in source code to pass the UT
+in vendor/mediatek/proprietary/hardware/ril/rilproxy/libril/ril.cpp
+rebuild vendor/mediatek/proprietary/hardware/ril/rilproxy/mtk-rilporxy
+Copy the rilproxytest.bat to window PC and customize the rilproxytest.bat and run it
+
+All the source code of this folder were written by MediaTek co..

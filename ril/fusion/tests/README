@@ -1,0 +1,13 @@
+WHAT IT DOES?
+=============
+RILD unit test code.
+
+HOW IT WAS BUILT?
+==================
+You can build it by android build command.
+
+HOW TO USE IT?
+==============
+Copy the riltest.bat to window PC and customize the riltest.bat and run it
+
+All the source code of this folder were written by MediaTek co..

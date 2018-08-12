@@ -1,0 +1,37 @@
+LOCAL_CLANG := true
+
+LOCAL_CFLAGS := -DLOG_TAG=\"DynamicFpsPolicy\"
+LOCAL_CFLAGS += -Wall -Werror -Wunused -Wunreachable-code
+
+ifeq ($(MTK_DYNAMIC_FPS_SUPPORT),yes)
+	LOCAL_CFLAGS += -DMTK_DYNAMIC_FPS_SUPPORT
+	LOCAL_CPPFLAGS += -DMTK_DYNAMIC_FPS_SUPPORT
+	LOCAL_CFLAGS += -DMTK_DYNAMIC_FPS_FRAMEWORK_SUPPORT
+	LOCAL_CPPFLAGS += -DMTK_DYNAMIC_FPS_FRAMEWORK_SUPPORT
+endif
+
+ifeq ($(MTK_DYNAMIC_FPS_FW_SUPPORT),yes)
+	LOCAL_CFLAGS += -DMTK_DYNAMIC_FPS_SUPPORT
+	LOCAL_CPPFLAGS += -DMTK_DYNAMIC_FPS_SUPPORT
+	LOCAL_CFLAGS += -DMTK_DYNAMIC_FPS_FRAMEWORK_SUPPORT
+	LOCAL_CPPFLAGS += -DMTK_DYNAMIC_FPS_FRAMEWORK_SUPPORT
+endif
+
+LOCAL_C_INCLUDES:= \
+	$(TOP)/$(MTK_PATH_SOURCE)/hardware/libgem/inc
+
+LOCAL_SRC_FILES := \
+	utils.cpp \
+	FpsPolicy.cpp \
+	FpsInfo.cpp \
+	FpsVsync.cpp \
+	string_def.cpp
+
+LOCAL_SHARED_LIBRARIES := \
+	libutils \
+	libcutils \
+	liblog \
+	libhidlbase \
+	libhidltransport \
+	libhwbinder \
+	libhardware

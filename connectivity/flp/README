@@ -1,0 +1,17 @@
+This directory contains FLP_HAL module
+
+
+WHAT IT DOES?
+=============
+It provides FLP_HAL to access hardware fused location provider
+
+
+HOW IT WAS BUILT?
+==================
+It needs the following libs from AOSP:
+
+liblog
+
+HOW TO USE IT?
+==============
+Files in this directory is used for FLP HAL module

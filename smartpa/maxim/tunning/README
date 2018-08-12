@@ -1,0 +1,22 @@
+The tuning folder of Maxim speaker
+
+
+WHAT IT DOES?
+=============
+
+Provide APIs to control Maxim speaker.
+
+
+HOW IT WAS BUILT?
+==================
+
+It needs the following library from AOSP:
+1.  libcutils.so
+2.  libutils.so
+
+HOW TO USE IT?
+==============
+
+The releated APIs of Maxim speaker are used in audio HAL.
+
+
